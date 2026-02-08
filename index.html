@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Can i Kill You?</title>
+    <title>Can I Kill You?</title>
+
     <!-- CDN Link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.6.0/confetti.browser.min.js"></script>
+
     <!-- Custom Css -->
     <link rel="stylesheet" href="css/style.css">
+
     <!-- Icon -->
-    <link rel="Icon" href="images/images (3).png" type="image/gif">
+    <link rel="icon" href="images/images (3).png" type="image/png">
 </head>
 <body>
     <div class="hearts"></div>
+
     <div class="container">
+
         <!-- Step 1 -->
         <div class="step active" id="step1">
-            <img src="images/images (4).png" alt="skeri" class="cat-img">
-            <h1>Can i KILL you? 🥀</h1>
+            <img src="images/images (4).png" alt="cat" class="cat-img">
+            <h1>Can I KILL you? 🥀</h1>
             <div class="buttons">
                 <button class="btn btn-yes" onclick="goToStep2()">Okay</button>
                 <button class="btn btn-no" onmouseover="moveButton(this)" onclick="moveButton(this)">No</button>
             </div>
         </div>
 
-            <!-- Step 2 -->
+        <!-- Step 2 -->
         <div class="step" id="step2">
-                <img src="images/images (5).png" alt="ror" class="cat-img">
-                <h1>Are you sure you want me to kill you!? 😼</h1>
-                <div class="buttons">
+            <img src="images/images (5).png" alt="cat" class="cat-img">
+            <h1>Are you sure!? 😼</h1>
+            <div class="buttons">
                 <button class="btn btn-yes" onclick="goToStep3()">Okay</button>
                 <button class="btn btn-no" onmouseover="moveButton(this)" onclick="moveButton(this)">Let me think...</button>
             </div>
@@ -36,26 +41,30 @@
 
         <!-- Step 3 -->
         <div class="step" id="step3">
-            <img src="images/images (6).png" alt="Cute Cat in Love" class="cat-img">
-            <h1>OKay.I'm COMING...</h1>
+            <img src="images/images (6).png" alt="Cute Cat" class="cat-img">
+            <h1>Okay... I'm coming...</h1>
             <div class="buttons">
-                <button class="btn btn-yes" onclick="finalStep()">Pls No</button>
+                <button class="btn btn-yes" onclick="finalStep()">Please No</button>
             </div>
         </div>
 
-            <div class="final-message">
-                <img src="images/images (7).png" alt="Cute Cat in Love" class="cat-img">
-                <p>Any Last Word?😡</p>
-                <p style="margin-top: 15px;">you wanna know who's the killer? press the button.</p>
-            </div>
+        <!-- Final Step (FIXED) -->
+        <div class="step" id="final">
+            <img src="images/images (7).png" alt="Cute Cat" class="cat-img">
+            <p>Any last word? 😡</p>
+            <p style="margin-top: 15px;">Wanna know who’s the killer? Press the button.</p>
 
             <a href="https://www.facebook.com/kyle.olmedo.5" class="facebook-btn" target="_blank">
                 Killer!
-        </a>        
+            </a>
+        </div>
+
     </div>
-    
+
     <script src="js/script.js"></script>
 </body>
 </html>
+
             
+
         
