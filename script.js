@@ -1,4 +1,4 @@
-// Create hearts effect// Hearts animation
+// ---------------- Hearts Animation ----------------
 function createHearts() {
     const hearts = document.querySelector('.hearts');
     const heart = document.createElement('div');
@@ -13,46 +13,48 @@ function createHearts() {
 // Run hearts continuously
 setInterval(createHearts, 300);
 
-// Move "No" button randomly
+
+// ---------------- Move "No" Button ----------------
 function moveButton(button) {
     const container = document.querySelector('.container');
     const x = Math.random() * (container.offsetWidth - button.offsetWidth);
     const y = Math.random() * (container.offsetHeight - button.offsetHeight);
+
     button.style.position = 'absolute';
     button.style.left = `${x}px`;
     button.style.top = `${y}px`;
 }
 
-// Navigate to Step 2
+
+// ---------------- Step Navigation ----------------
 function goToStep2() {
     document.getElementById('step1').classList.remove('active');
     document.getElementById('step2').classList.add('active');
     triggerConfetti();
 }
 
-// Navigate to Step 3
 function goToStep3() {
     document.getElementById('step2').classList.remove('active');
     document.getElementById('step3').classList.add('active');
     triggerConfetti();
 }
 
-// Navigate to Final Step
 function finalStep() {
     document.getElementById('step3').classList.remove('active');
     document.getElementById('final').classList.add('active');
 
-    // Show Facebook button
+    // Show Facebook button in final step
     document.querySelector('.facebook-btn').style.display = 'inline-block';
 
-    // Trigger confetti multiple times for celebration
+    // Confetti celebration
     triggerConfetti();
     setTimeout(() => triggerConfetti(), 500);
     setTimeout(() => triggerConfetti(), 1000);
     setTimeout(() => triggerConfetti(), 1500);
 }
 
-// Confetti function
+
+// ---------------- Confetti Function ----------------
 function triggerConfetti() {
     confetti({
         particleCount: 100,
@@ -62,4 +64,4 @@ function triggerConfetti() {
 }
 
 
-}
+
